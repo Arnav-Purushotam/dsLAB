@@ -1,0 +1,87 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int A[10];
+int top = -1;
+
+int isfull(){
+    if(top == 10){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+
+int isempty(){
+    if(top == -1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+void push(int value){
+    if(isfull()){
+        cout<<"stack overflow"<<"\n";
+    }else{
+        top += 1;
+        A[top] = value;
+    }
+    
+    
+}
+
+void pull(){
+    if(isempty()){
+        cout<< "stack underflow"<<"\n";
+    }else{
+        cout<< A[top] <<"\n";
+        top -= 1;
+        
+    }
+}
+
+
+
+int main()
+{
+    int quit = 0;
+    while(quit ==0){
+        int choice;
+        cout<< "choices: "<<"\n";
+        cout<< "1 : push "<<"\n";
+        cout<< "2 : pull "<<"\n";
+        cout<< "3 : exit "<<"\n";
+        cout<< "enter your choice : "<<"\n";
+        cin>>choice;
+        
+        switch(choice){
+            
+            case 1:
+                int num;
+                cout<< "enter value to push to stack"<<"\n";
+                cin>>num;
+                push(num);
+                break;
+                
+            case 2:
+                pull();
+                break;
+                
+            case 3: exit(0);
+        }
+        
+
+        
+    }
+    
+
+    
+    
+
+    return 0;
+}
