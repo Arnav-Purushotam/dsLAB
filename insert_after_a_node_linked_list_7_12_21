@@ -8,7 +8,7 @@ struct node{
     struct node* next;
 };
 
-void insert_after(struct node** nodex, int new_data){
+void insert_after(struct node* nodex, int new_data){
 
     struct node* new_node = NULL;
     new_node = (struct node*)malloc(sizeof(struct node));
@@ -44,7 +44,7 @@ int main()
     
     display(head);
     
-    insert_after(&head,5);
+    insert_after(head,5);
      
     display(head);
      
