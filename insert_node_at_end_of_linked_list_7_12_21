@@ -8,7 +8,7 @@ struct node{
     struct node* next;
 };
 
-void insert_end(struct node** head, int new_data){
+void insert_end(struct node* head, int new_data){
 
     struct node* node1 = head;
 
@@ -50,7 +50,7 @@ int main()
     
     display(head);
     
-    insert_end(&head,5);
+    insert_end(head,5);
      
     display(head);
      
